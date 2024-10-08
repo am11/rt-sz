@@ -54,7 +54,7 @@ jobs:
       - name: Checkout runtime repo
         uses: actions/checkout@v4
         with:
-          repository: dotnet/runtime
+          repository: am11/runtime
           fetch-depth: 0
           path: runtime
           show-progress: true
@@ -241,7 +241,7 @@ jobs:
           merge-multiple: true
       - run: |
           echo -n '{"body":"# Size statistics\n\n' > table.txt
-          echo -n "Pull request dotnet/runtime#${{ github.event.issue.title }}\n\n" >> table.txt
+          echo -n "Pull request am11/runtime#${{ github.event.issue.title }}\n\n" >> table.txt
           echo -n "| Project | Size before | Size after | Difference |\n" >> table.txt
           echo -n "|---------|-------------|------------|------------|\n" >> table.txt
           for file in *.baseline.txt; do
