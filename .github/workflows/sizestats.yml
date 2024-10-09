@@ -6,7 +6,7 @@ on:
 
 jobs:
   check_title:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Check title is correct
@@ -37,7 +37,7 @@ jobs:
         include:
           - os: linux
             osrid: linux
-            vm: ubuntu-latest
+            vm: ubuntu-24.04
             buildscript: ./build.sh
             propertyswitch: '-'
     runs-on: ${{ matrix.vm }}
@@ -107,7 +107,7 @@ jobs:
         include:
           - os: linux
             osrid: linux
-            vm: ubuntu-latest
+            vm: ubuntu-24.04
     runs-on: ${{ matrix.vm }}
     steps:
 
@@ -154,7 +154,7 @@ jobs:
   
   summarize:
     needs: [dotnet]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/download-artifact@v4
         with:
