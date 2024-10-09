@@ -48,7 +48,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install --no-install-recommends -y libkrb5-dev liblttng-ust-dev ninja-build libicu-dev libssl-dev
           clang -dumpversion
-          exit 1
       - name: Checkout runtime repo
         uses: actions/checkout@v4
         with:
